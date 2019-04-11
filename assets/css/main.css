@@ -248,14 +248,22 @@ Cards:
 }
 
 @supports (grid-area: auto){
-
+ 
+    @media screen and (min-width: 50em){
+        .cards{
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: .5em;
+        }
+    }
+    
 .card a {
 display:grid;
 /* setting up two columns, one with a fixed with and one with an auto width */
 grid-template-columns: 6em auto;
 grid-template-rows: 1fr 1fr; 
 text-align:left;
-padding:0;
+padding:0 1em 0 0;
 
 }
 
